@@ -1,0 +1,216 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=Roboto:wght@400;500;700;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  font-family: "Roboto", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+button {
+  border: 0;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.container {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+header nav {
+  padding: 11px 0;
+  display: flex;
+  align-items: center;
+}
+header nav .logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-right: 40px;
+}
+header nav .nav-items {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+header nav .nav-items .important {
+  display: flex;
+  justify-content: space-evenly;
+}
+header nav .nav-items .important button {
+  padding: 8px;
+  background-color: #70c05b;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-radius: 4px;
+  margin-right: 16px;
+}
+header nav .nav-items .important .icon {
+  padding: 12px 0px 12px 8px;
+  background: url("https://static.thenounproject.com/png/101791-200.png") no-repeat right;
+  background-size: 20px;
+  border: 2px solid #70c05b;
+  border-radius: 8px;
+  outline: none;
+  width: 344px;
+}
+header nav .nav-items .important .icon:focus {
+  background-image: none;
+  transition: 0.3s;
+}
+header nav .nav-items .places {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap-reverse;
+  gap: 24px;
+}
+header nav .nav-items .places .product {
+  display: grid;
+  place-items: center;
+}
+header nav .nav-items .places .product p {
+  font-size: 12px;
+  padding-top: 8px;
+}
+header nav .nav-items .places .user {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 217px;
+  height: 72px;
+  padding: 8px;
+  border-radius: 4px;
+  gap: 10px;
+}
+
+.menu {
+  border: 0;
+  background: transparent;
+  display: none;
+  cursor: pointer;
+}
+
+@media (max-width: 1200px) {
+  nav {
+    justify-content: space-between;
+  }
+  .nav-items {
+    margin-top: 50px;
+    flex-direction: column;
+    gap: 24px;
+    position: fixed;
+    top: 76px;
+    top: -100%;
+    width: 100%;
+    height: calc(100vh - 104px);
+    background: #fff;
+    padding: 60px 0;
+    transition: all 0.3s ease-in-out;
+    z-index: 10;
+  }
+  .nav-items .places {
+    flex-direction: column;
+  }
+  header nav .menu {
+    display: block;
+  }
+  .open .nav-items {
+    top: 0;
+    justify-content: center;
+  }
+}
+@media (max-width: 576px) {
+  .nav-items {
+    flex-direction: column;
+    gap: 24px;
+    position: fixed;
+    top: 76px;
+    left: -100%;
+    width: 100%;
+    height: calc(100vh - 104px);
+    background: #fff;
+    padding: 60px 0;
+    transition: all 0.3s ease-in-out;
+    z-index: 10;
+  }
+  .menu {
+    display: block;
+  }
+  .open .nav-items {
+    left: 0;
+  }
+  .open {
+    box-shadow: none;
+  }
+  .icon {
+    max-width: 150px;
+  }
+}
+main {
+  margin-top: 100px;
+  background-color: #fbf8ec;
+}
+main .home {
+  background-image: url(../images/pattern2.png);
+}
+main .home .home-content {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  flex-wrap: wrap-reverse;
+}
+main .home .home-content h1 {
+  font-size: 48px;
+}
+main .product-cards {
+  padding-top: 80px;
+}
+main .product-cards .products-cards_content .cards-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap-reverse;
+}
+main .product-cards .products-cards_content .cards-title button {
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  padding: 8px;
+  border-radius: 6px;
+}
+main .product-cards .products-cards_content .cards-title button:hover {
+  background-color: #70c05b;
+  color: #fff;
+  transition: 0.4s;
+}
+main .product-cards .products-cards_content .cards-title button:hover svg path {
+  fill: #fff;
+}
+main .product-cards .products-cards_content .cards {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}/*# sourceMappingURL=global.css.map */
