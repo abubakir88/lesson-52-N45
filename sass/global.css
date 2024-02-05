@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=Roboto:wght@400;500;700;900&display=swap");
 * {
   margin: 0;
@@ -32,6 +33,8 @@ header {
   top: 0;
   left: 0;
   right: 0;
+  z-index: 1;
+  background-color: white;
 }
 header nav {
   padding: 11px 0;
@@ -187,6 +190,11 @@ main .home .home-content h1 {
 main .product-cards {
   padding-top: 80px;
 }
+main .product-cards .products-cards_content {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
 main .product-cards .products-cards_content .cards-title {
   display: flex;
   justify-content: space-between;
@@ -209,8 +217,73 @@ main .product-cards .products-cards_content .cards-title button:hover svg path {
   fill: #fff;
 }
 main .product-cards .products-cards_content .cards {
+  margin-top: 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+}
+main .product-cards .products-cards_content .cards .card {
+  max-width: 272px;
+  background-color: #fff;
+}
+main .product-cards .products-cards_content .cards .card .card-texts {
+  padding: 0px 10px;
+}
+main .product-cards .products-cards_content .cards .card .card-texts .prices {
+  display: flex;
+  justify-content: space-between;
+}
+main .product-cards .products-cards_content .cards .card .card-texts .prices .price-1 h3 {
+  width: 71px;
+  height: 27px;
+  gap: 4px;
+}
+main .product-cards .products-cards_content .cards .card .card-texts .prices .price-1 p {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  color: #bfbfbf;
+}
+main .product-cards .products-cards_content .cards .card .card-texts .stars .rating {
+  display: inline-block;
+}
+main .product-cards .products-cards_content .cards .card .card-texts .stars .rating input {
+  display: none;
+}
+main .product-cards .products-cards_content .cards .card .card-texts .stars .rating label {
+  float: right;
+  cursor: pointer;
+  color: #ccc;
+  transition: color 0.3s;
+}
+main .product-cards .products-cards_content .cards .card .card-texts .stars .rating label:before {
+  content: "★";
+  font-size: 30px;
+}
+main .product-cards .products-cards_content .cards .card .card-texts .stars .rating input:checked ~ label,
+main .product-cards .products-cards_content .cards .card .card-texts .stars .rating label:hover,
+main .product-cards .products-cards_content .cards .card .card-texts .stars .rating label:hover ~ label {
+  color: rgb(247, 207, 11);
+  transition: color 0.3s;
+}
+main .product-cards .products-cards_content .cards .card .card-texts .card-btn {
+  display: flex;
+  justify-content: center;
+}
+main .product-cards .products-cards_content .cards .card .card-texts .card-btn button {
+  display: flex;
+  font-size: 16px;
+  font-weight: 400;
+  border-radius: 4px;
+  padding: 10px 80px;
+  border: 2px solid #70c05b;
+  background-color: transparent;
+  color: #70c05b;
+}
+main .product-cards .products-cards_content .cards .card .card-texts .card-btn button:hover {
+  background-color: #ff6633;
+  border-color: #ff6633;
+  color: #fff;
+  transition: 0.4s;
 }/*# sourceMappingURL=global.css.map */
