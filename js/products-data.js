@@ -597,13 +597,23 @@ function displayProducts(products) {
 }
 displayProducts(products);
 
-///////////////////////////////
+// ///////////////////////////////
 
-const userCardTemplate = document.querySelector("[data-user-template]");
-const userCardContainer = document.querySelector("[data-user-cards-container]");
-const searchInput = document.querySelector("[data-search]");
+// const userCardTemplate = document.querySelector("[data-user-template]");
+// const userCardContainer = document.querySelector("[data-user-cards-container]");
+// const searchInput = document.querySelector("[data-search]");
 
-// let products = [];
+// // let products = [];
+
+// // searchInput.addEventListener("input", (e) => {
+// //   const value = e.target.value.toLowerCase();
+// //   products.forEach((product) => {
+// //     const isVisible =
+// //       product.name.toLowerCase().includes(value) ||
+// //       product.id.toLowerCase().includes(value);
+// //     product.element.classList.toggle("hide", !isVisible);
+// //   });
+// // });
 
 // searchInput.addEventListener("input", (e) => {
 //   const value = e.target.value.toLowerCase();
@@ -615,36 +625,26 @@ const searchInput = document.querySelector("[data-search]");
 //   });
 // });
 
-searchInput.addEventListener("input", (e) => {
-  const value = e.target.value.toLowerCase();
-  products.forEach((product) => {
-    const isVisible =
-      product.name.toLowerCase().includes(value) ||
-      product.id.toLowerCase().includes(value);
-    product.element.classList.toggle("hide", !isVisible);
-  });
-});
+// products = data.map((product) => {
+//   const card = userCardTemplate.content.cloneNode(true).children[0];
+//   const header = card.querySelector("[data-header]");
+//   const body = card.querySelector("[data-body]");
+//   header.textContent = product.name;
+//   body.textContent = product.id;
+//   userCardContainer.append(card);
+//   return { name: product.name, id: product.id, element: card };
+// });
 
-products = data.map((product) => {
-  const card = userCardTemplate.content.cloneNode(true).children[0];
-  const header = card.querySelector("[data-header]");
-  const body = card.querySelector("[data-body]");
-  header.textContent = product.name;
-  body.textContent = product.id;
-  userCardContainer.append(card);
-  return { name: product.name, id: product.id, element: card };
-});
-
-// fetch("https://jsonplaceholder.typicode.com/users")
-//   .then((res) => res.json())
-//   .then((data) => {
-//     users = data.map((user) => {
-//       const card = userCardTemplate.content.cloneNode(true).children[0];
-//       const header = card.querySelector("[data-header]");
-//       const body = card.querySelector("[data-body]");
-//       header.textContent = user.name;
-//       body.textContent = user.email;
-//       userCardContainer.append(card);
-//       return { name: user.name, email: user.email, element: card };
-//     });
-//   });
+// // fetch("https://jsonplaceholder.typicode.com/users")
+// //   .then((res) => res.json())
+// //   .then((data) => {
+// //     users = data.map((user) => {
+// //       const card = userCardTemplate.content.cloneNode(true).children[0];
+// //       const header = card.querySelector("[data-header]");
+// //       const body = card.querySelector("[data-body]");
+// //       header.textContent = user.name;
+// //       body.textContent = user.email;
+// //       userCardContainer.append(card);
+// //       return { name: user.name, email: user.email, element: card };
+// //     });
+// //   });

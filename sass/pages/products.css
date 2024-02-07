@@ -236,6 +236,7 @@ header nav .nav-items .places .user {
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
+  gap: 40px;
 }
 .cards .card {
   max-width: 272px;
