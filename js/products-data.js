@@ -575,3 +575,76 @@ const products = [
     ],
   },
 ];
+const cards = document.querySelector(".cards");
+
+function displayProducts(products) {
+  let str = "";
+  products.forEach((product) => {
+    str += `
+      <div class="card">
+        <img src="${product.images[0]}" />
+        <div class="card-content">
+        <h2>${product.id}</h2>
+          <h3>${product.name}</h3>
+          <p>${product.category}</p>
+          <p>${product.description}</p>
+          <h3>${product.price}$</h3>
+        </div>
+      </div>
+    `;
+  });
+  cards.innerHTML = str;
+}
+displayProducts(products);
+
+///////////////////////////////
+
+const userCardTemplate = document.querySelector("[data-user-template]");
+const userCardContainer = document.querySelector("[data-user-cards-container]");
+const searchInput = document.querySelector("[data-search]");
+
+// let products = [];
+
+// searchInput.addEventListener("input", (e) => {
+//   const value = e.target.value.toLowerCase();
+//   products.forEach((product) => {
+//     const isVisible =
+//       product.name.toLowerCase().includes(value) ||
+//       product.id.toLowerCase().includes(value);
+//     product.element.classList.toggle("hide", !isVisible);
+//   });
+// });
+
+searchInput.addEventListener("input", (e) => {
+  const value = e.target.value.toLowerCase();
+  products.forEach((product) => {
+    const isVisible =
+      product.name.toLowerCase().includes(value) ||
+      product.id.toLowerCase().includes(value);
+    product.element.classList.toggle("hide", !isVisible);
+  });
+});
+
+products = data.map((product) => {
+  const card = userCardTemplate.content.cloneNode(true).children[0];
+  const header = card.querySelector("[data-header]");
+  const body = card.querySelector("[data-body]");
+  header.textContent = product.name;
+  body.textContent = product.id;
+  userCardContainer.append(card);
+  return { name: product.name, id: product.id, element: card };
+});
+
+// fetch("https://jsonplaceholder.typicode.com/users")
+//   .then((res) => res.json())
+//   .then((data) => {
+//     users = data.map((user) => {
+//       const card = userCardTemplate.content.cloneNode(true).children[0];
+//       const header = card.querySelector("[data-header]");
+//       const body = card.querySelector("[data-body]");
+//       header.textContent = user.name;
+//       body.textContent = user.email;
+//       userCardContainer.append(card);
+//       return { name: user.name, email: user.email, element: card };
+//     });
+//   });

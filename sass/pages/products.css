@@ -77,10 +77,14 @@ header nav .nav-items .important .icon {
   border-radius: 8px;
   outline: none;
   width: 344px;
+  font-size: 1rem;
 }
 header nav .nav-items .important .icon:focus {
   background-image: none;
   transition: 0.3s;
+}
+header nav .nav-items .important .icon:focus main .main-content .cards {
+  display: none;
 }
 header nav .nav-items .places {
   display: flex;
@@ -152,7 +156,6 @@ header nav .nav-items .places .user {
 }
 
 .catalog-open {
-  padding-top: 94px;
   transition: top ease 0.5s;
 }
 .catalog-open .catalog {
@@ -227,74 +230,62 @@ header nav .nav-items .places .user {
     max-width: 150px;
   }
 }
-main {
+.cards {
   margin-top: 94px;
-  background-color: #fbf8ec;
-}
-main .main-content {
-  padding: 44px 0px 62px 0px;
-}
-main .main-content h1 {
-  font-size: 36px;
-  font-weight: 700;
-  color: #414141;
-}
-main .main-content .cards {
-  margin-top: 40px;
   display: flex;
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
 }
-main .main-content .cards .card {
+.cards .card {
   max-width: 272px;
   background-color: #fff;
 }
-main .main-content .cards .card .card-texts {
+.cards .card .card-texts {
   padding: 0px 10px;
 }
-main .main-content .cards .card .card-texts .prices {
+.cards .card .card-texts .prices {
   display: flex;
   justify-content: space-between;
 }
-main .main-content .cards .card .card-texts .prices .price-1 h3 {
+.cards .card .card-texts .prices .price-1 h3 {
   width: 71px;
   height: 27px;
   gap: 4px;
 }
-main .main-content .cards .card .card-texts .prices .price-1 p {
+.cards .card .card-texts .prices .price-1 p {
   font-size: 12px;
   font-weight: 400;
   line-height: 18px;
   color: #bfbfbf;
 }
-main .main-content .cards .card .card-texts .stars .rating {
+.cards .card .card-texts .stars .rating {
   display: inline-block;
 }
-main .main-content .cards .card .card-texts .stars .rating input {
+.cards .card .card-texts .stars .rating input {
   display: none;
 }
-main .main-content .cards .card .card-texts .stars .rating label {
+.cards .card .card-texts .stars .rating label {
   float: right;
   cursor: pointer;
   color: #ccc;
   transition: color 0.3s;
 }
-main .main-content .cards .card .card-texts .stars .rating label:before {
+.cards .card .card-texts .stars .rating label:before {
   content: "★";
   font-size: 30px;
 }
-main .main-content .cards .card .card-texts .stars .rating input:checked ~ label,
-main .main-content .cards .card .card-texts .stars .rating label:hover,
-main .main-content .cards .card .card-texts .stars .rating label:hover ~ label {
+.cards .card .card-texts .stars .rating input:checked ~ label,
+.cards .card .card-texts .stars .rating label:hover,
+.cards .card .card-texts .stars .rating label:hover ~ label {
   color: #ff6633;
   transition: color 0.3s;
 }
-main .main-content .cards .card .card-texts .card-btn {
+.cards .card .card-texts .card-btn {
   display: flex;
   justify-content: center;
 }
-main .main-content .cards .card .card-texts .card-btn button {
+.cards .card .card-texts .card-btn button {
   display: flex;
   font-size: 16px;
   font-weight: 400;
@@ -305,30 +296,15 @@ main .main-content .cards .card .card-texts .card-btn button {
   color: #70c05b;
   margin-bottom: 12px;
 }
-main .main-content .cards .card .card-texts .card-btn button:hover {
+.cards .card .card-texts .card-btn button:hover {
   background-color: #ff6633;
   border-color: #ff6633;
   color: #fff;
   transition: 0.4s;
 }
-main .pagination {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 16px;
-  padding-bottom: 62px;
-}
-main .pagination svg,
-main .pagination p {
-  cursor: pointer;
-}
-main .pagination svg:hover path,
-main .pagination p:hover {
-  fill: #ff6633;
-  color: #ff6633;
-  transition: 0.2s;
-  display: grid;
-  grid-template-columns: repeat(auto-fill);
+
+.hide {
+  display: none;
 }
 
 .footer {
