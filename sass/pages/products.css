@@ -152,11 +152,16 @@ header nav .nav-items .places .user {
 }
 
 .catalog-open {
+  padding-top: 94px;
   transition: top ease 0.5s;
 }
 .catalog-open .catalog {
   display: block;
   transition: top ease 0.5s;
+}
+
+.hide {
+  display: none;
 }
 
 .menu {
@@ -226,103 +231,70 @@ main {
   margin-top: 94px;
   background-color: #fbf8ec;
 }
-main .home {
-  background-image: url(../images/pattern2.png);
+main .main-content {
+  padding: 44px 0px 62px 0px;
 }
-main .home .home-content {
-  display: flex;
-  align-items: center;
-  gap: 18px;
-  flex-wrap: wrap-reverse;
+main .main-content h1 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #414141;
 }
-main .home .home-content h1 {
-  font-size: 48px;
-}
-main .product-cards {
-  padding-top: 80px;
-}
-main .product-cards .products-cards_content {
-  display: flex;
-  flex-direction: column;
-  gap: 50px;
-}
-main .product-cards .products-cards_content .cards-title {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap-reverse;
-}
-main .product-cards .products-cards_content .cards-title button {
-  display: flex;
-  align-items: center;
-  background-color: transparent;
-  padding: 8px;
-  border-radius: 6px;
-}
-main .product-cards .products-cards_content .cards-title button:hover {
-  background-color: #70c05b;
-  color: #fff;
-  transition: 0.3s;
-}
-main .product-cards .products-cards_content .cards-title button:hover svg path {
-  fill: #fff;
-}
-main .product-cards .products-cards_content .cards {
+main .main-content .cards {
   margin-top: 40px;
   display: flex;
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
 }
-main .product-cards .products-cards_content .cards .card {
+main .main-content .cards .card {
   max-width: 272px;
   background-color: #fff;
 }
-main .product-cards .products-cards_content .cards .card .card-texts {
+main .main-content .cards .card .card-texts {
   padding: 0px 10px;
 }
-main .product-cards .products-cards_content .cards .card .card-texts .prices {
+main .main-content .cards .card .card-texts .prices {
   display: flex;
   justify-content: space-between;
 }
-main .product-cards .products-cards_content .cards .card .card-texts .prices .price-1 h3 {
+main .main-content .cards .card .card-texts .prices .price-1 h3 {
   width: 71px;
   height: 27px;
   gap: 4px;
 }
-main .product-cards .products-cards_content .cards .card .card-texts .prices .price-1 p {
+main .main-content .cards .card .card-texts .prices .price-1 p {
   font-size: 12px;
   font-weight: 400;
   line-height: 18px;
   color: #bfbfbf;
 }
-main .product-cards .products-cards_content .cards .card .card-texts .stars .rating {
+main .main-content .cards .card .card-texts .stars .rating {
   display: inline-block;
 }
-main .product-cards .products-cards_content .cards .card .card-texts .stars .rating input {
+main .main-content .cards .card .card-texts .stars .rating input {
   display: none;
 }
-main .product-cards .products-cards_content .cards .card .card-texts .stars .rating label {
+main .main-content .cards .card .card-texts .stars .rating label {
   float: right;
   cursor: pointer;
   color: #ccc;
   transition: color 0.3s;
 }
-main .product-cards .products-cards_content .cards .card .card-texts .stars .rating label:before {
+main .main-content .cards .card .card-texts .stars .rating label:before {
   content: "★";
   font-size: 30px;
 }
-main .product-cards .products-cards_content .cards .card .card-texts .stars .rating input:checked ~ label,
-main .product-cards .products-cards_content .cards .card .card-texts .stars .rating label:hover,
-main .product-cards .products-cards_content .cards .card .card-texts .stars .rating label:hover ~ label {
+main .main-content .cards .card .card-texts .stars .rating input:checked ~ label,
+main .main-content .cards .card .card-texts .stars .rating label:hover,
+main .main-content .cards .card .card-texts .stars .rating label:hover ~ label {
   color: #ff6633;
   transition: color 0.3s;
 }
-main .product-cards .products-cards_content .cards .card .card-texts .card-btn {
+main .main-content .cards .card .card-texts .card-btn {
   display: flex;
   justify-content: center;
 }
-main .product-cards .products-cards_content .cards .card .card-texts .card-btn button {
+main .main-content .cards .card .card-texts .card-btn button {
   display: flex;
   font-size: 16px;
   font-weight: 400;
@@ -333,163 +305,30 @@ main .product-cards .products-cards_content .cards .card .card-texts .card-btn b
   color: #70c05b;
   margin-bottom: 12px;
 }
-main .product-cards .products-cards_content .cards .card .card-texts .card-btn button:hover {
+main .main-content .cards .card .card-texts .card-btn button:hover {
   background-color: #ff6633;
   border-color: #ff6633;
   color: #fff;
   transition: 0.4s;
 }
-main .sovun {
-  padding-top: 120px;
-}
-main .sovun h1 {
-  font-size: 36px;
-  font-weight: 700;
-}
-main .sovun .sovun-cards {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  align-items: center;
-  padding: 40px 0px 120px 0px;
-}
-main .sovun .sovun-cards .sovun-card-1 {
-  display: flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-  align-items: center;
-  background-color: #fcd5ba;
-}
-main .sovun .sovun-cards .sovun-card-1 .sovun-card-1-texts {
-  padding-left: 40px;
-}
-main .sovun .sovun-cards .sovun-card-1 .sovun-card-1-texts h2 {
-  max-width: 258px;
-}
-main .sovun .sovun-cards .sovun-card-1 .sovun-card-1-texts p {
-  max-width: 258px;
-}
-main .sovun .sovun-cards .sovun-card-2 {
-  display: flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-  align-items: center;
-  background-color: #e5ffde;
-}
-main .sovun .sovun-cards .sovun-card-2 img {
-  padding: 8px 0;
-}
-main .sovun .sovun-cards .sovun-card-2 .sovun-card-2-texts {
-  padding-left: 40px;
-}
-main .sovun .sovun-cards .sovun-card-2 .sovun-card-2-texts h2 {
-  max-width: 240px;
-}
-main .sovun .sovun-cards .sovun-card-2 .sovun-card-2-texts p {
-  padding-top: 8px;
-  max-width: 258px;
-}
-main .map .map-content h1 {
-  color: #414141;
-  font-size: 36px;
-  font-weight: 700;
-  line-height: 54px;
-  letter-spacing: 0em;
-  text-align: left;
-}
-main .map .map-content .btns {
-  display: flex;
-  gap: 24px;
-  padding-top: 40px;
-  padding-bottom: 24px;
-}
-main .map .map-content .btns a {
-  color: #606060;
-  background-color: #f3f2f1;
-  border-radius: 4px;
-  padding: 6px 12px;
-}
-main .map .map-content .btns a:hover {
-  background-color: #70c05b;
-  color: #fff;
-  transition: 0.3s;
-}
-main .stati {
-  padding-bottom: 80px;
-}
-main .stati .stati-content .stati-title {
-  padding: 120px 0px 40px 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-}
-main .stati .stati-content .stati-title h3 {
-  font-size: 36px;
-  font-weight: 700;
-  color: #414141;
-}
-main .stati .stati-content .stati-title button {
+main .pagination {
   display: flex;
   align-items: center;
-  background-color: transparent;
-  padding: 8px;
-  border-radius: 6px;
+  justify-content: center;
+  gap: 16px;
+  padding-bottom: 62px;
 }
-main .stati .stati-content .stati-title button:hover {
-  background-color: #70c05b;
-  color: #fff;
-  transition: 0.3s;
+main .pagination svg,
+main .pagination p {
+  cursor: pointer;
 }
-main .stati .stati-content .stati-title button:hover svg path {
-  fill: #fff;
-}
-main .stati .stati-content .stati-cards {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-wrap: wrap;
-}
-main .stati .stati-content .stati-cards .card {
-  max-width: 376px;
-  background-color: #fff;
-  border-radius: 6px;
-  overflow: hidden;
-}
-main .stati .stati-content .stati-cards .card:hover {
-  box-shadow: 4px 8px 16px 0px rgba(255, 102, 51, 0.2);
-  transition: 0.3s;
-}
-main .stati .stati-content .stati-cards .card .card-texts {
-  padding: 14px;
-}
-main .stati .stati-content .stati-cards .card .card-texts p {
-  font-size: 12px;
-  color: #8f8f8f;
-}
-main .stati .stati-content .stati-cards .card .card-texts h4 {
-  font-size: 18px;
-  color: #414141;
-  max-width: 356px;
-  padding: 10px 0;
-}
-main .stati .stati-content .stati-cards .card .card-texts h5 {
-  font-size: 16px;
-  font-weight: 400;
-  padding-bottom: 10px;
-}
-main .stati .stati-content .stati-cards .card .card-texts button,
-main .stati .stati-content .stati-cards .card .card-texts a {
-  padding: 8px;
-  font-size: 16px;
-  color: #70c05b;
-  width: 134px;
-  border-radius: 6px;
-}
-main .stati .stati-content .stati-cards .card .card-texts button:hover,
-main .stati .stati-content .stati-cards .card .card-texts a:hover {
-  color: #fff;
-  background-color: #70c05b;
+main .pagination svg:hover path,
+main .pagination p:hover {
+  fill: #ff6633;
+  color: #ff6633;
+  transition: 0.2s;
+  display: grid;
+  grid-template-columns: repeat(auto-fill);
 }
 
 .footer {
@@ -532,4 +371,4 @@ main .stati .stati-content .stati-cards .card .card-texts a:hover {
   align-items: center;
   -moz-column-gap: 10px;
        column-gap: 10px;
-}/*# sourceMappingURL=global.css.map */
+}/*# sourceMappingURL=products.css.map */
