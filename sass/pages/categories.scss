@@ -392,8 +392,10 @@ main {
       display: flex;
       align-items: center;
       gap: 6px;
-      color: #414141;
       padding: 24px 0;
+      a {
+        color: #414141;
+      }
       span {
         color: #8f8f8f;
       }
