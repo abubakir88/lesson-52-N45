@@ -81,7 +81,7 @@
                 </svg>
                 <p>Корзина</p>
               </a>
-              <a class="user">
+              <a class="user" id="btn-open">
                 <img src="../images/avatar.png" alt="avatar" />
                 <p>Алексей</p>
                 <svg
@@ -113,11 +113,43 @@
       </div>
     </header>
 
+    <div class="modal">
+      <div class="modal-content">
+        <div class="x">
+          <button id="btn-close">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              style="fill: #414141"
+            >
+              <path
+                d="m16.192 6.344-4.243 4.242-4.242-4.242-1.414 1.414L10.535 12l-4.242 4.242 1.414 1.414 4.242-4.242 4.243 4.242 1.414-1.414L13.364 12l4.242-4.242z"
+              ></path>
+            </svg>
+          </button>
+        </div>
+        <h1>Вход</h1>
+        <form>
+          <label for="vxod">Телефон </label>
+          <input type="text" placeholder="placeholder" id="vxod" />
+          <button type="submit" id="submit">Вход</button>
+          <div class="some-btns">
+            <a href="#">Регистрация</a>
+            <a href="#">Забыли пароль?</a>
+          </div>
+        </form>
+      </div>
+    </div>
+
     <section class="catalog">
       <div class="container">
         <div class="catalog-content">
           <div class="catalog-texts">
-            <a href="#">Молоко, сыр, яйцо</a>
+            <a style="color: red" href="../pages/categories.html"
+              >Категория 1440 page
+            </a>
             <a href="#">Хлеб</a>
             <a href="#">Фрукты и овощи</a>
             <a href="#">Замороженные продукты</a>
