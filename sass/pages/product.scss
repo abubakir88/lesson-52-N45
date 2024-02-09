@@ -408,29 +408,85 @@ main {
       margin-bottom: 16px;
     }
   }
-  .carousel {
+  .carousel-and-prices {
     display: flex;
-    gap: 16px;
-    #show {
-      width: 600px;
-      height: 400px;
-    }
-
-    #show img {
-      width: 100%;
-      height: 448px;
-    }
-
-    .indicators {
+    justify-content: space-between;
+    flex-wrap: wrap;
+    .carousel {
       display: flex;
-      flex-direction: column;
-      align-items: center;
       gap: 16px;
-    }
+      #show {
+        width: 600px;
+        height: 400px;
+      }
 
-    .indicators img {
-      width: 100px;
-      height: 100px;
+      #show img {
+        width: 100%;
+        height: 448px;
+      }
+
+      .indicators {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+      }
+
+      .indicators img {
+        width: 100px;
+        height: 100px;
+        cursor: pointer;
+      }
+    }
+    .prices {
+      .product-price {
+        display: flex;
+        justify-content: space-between;
+        align-content: center;
+        flex-wrap: wrap;
+        width: 560px;
+        p {
+          font-size: 24px;
+          font-weight: 400;
+          line-height: 36px;
+          color: #606060;
+          max-width: 100px;
+          span {
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 18px;
+            color: #bfbfbf;
+          }
+        }
+        h6 {
+          font-size: 36px;
+          font-weight: 700;
+          color: #414141;
+          max-width: 150px;
+          span {
+            font-size: 12px;
+            font-weight: 400;
+            color: #bfbfbf;
+          }
+        }
+      }
+      .karzinka {
+        display: grid;
+        place-items: center;
+        button {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 32px;
+          padding: 16px;
+          background-color: #ff6633;
+          border-radius: 4px;
+          p {
+            color: #fff;
+            font-size: 24px;
+          }
+        }
+      }
     }
   }
 }
